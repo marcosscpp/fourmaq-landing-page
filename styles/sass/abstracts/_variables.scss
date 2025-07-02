@@ -1,0 +1,17 @@
+// Fonts
+$primary-font: "Stara", sans-serif;
+
+$red-300: hwb(360 1% 27%);
+$red-500: hwb(359 11% 47%);
+
+$white: hwb(0 100% 0%);
+$gray-50: hwb(0 95% 5%);
+$gray-700: hwb(0 30% 70%);
+
+$black: hwb(0 0% 100%);
+
+// Folders Path
+$base-path: "../../assets";
+$image-path: "#{$base-path}/images";
+$icon-path: "#{$base-path}/icons";
+$font-path: "#{$base-path}/fonts";

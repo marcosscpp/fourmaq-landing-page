@@ -1,0 +1,39 @@
+.button {
+  align-items: center;
+  border-radius: 99px;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: fit-content;
+
+  &__text {
+    color: $white;
+    font: {
+      size: 1rem;
+      weight: 700;
+    }
+    padding: 0.75rem 1.5rem 0.75rem 1.5rem;
+    padding-right: 0;
+    text: {
+      align: center;
+      transform: uppercase;
+      wrap: balance;
+    }
+  }
+
+  &--primary {
+    background-color: $red-300;
+    box-shadow: 0 0.5rem 1.5rem 0 rgba($red-300, 0.3);
+  }
+
+  &--primary &__icon {
+    align-items: center;
+    background-color: $red-500;
+    border-radius: inherit;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    padding: 0.5rem 1.25rem;
+  }
+}

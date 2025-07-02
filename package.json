@@ -1,0 +1,22 @@
+{
+  "name": "fourmaq",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "sass": "node ./dev-utils/sass-watch.js",
+    "compress-images": "node ./dev-utils/compress-images.js",
+    "optimize-svgs": "node ./dev-utils/optimize-svg.js",
+    "replace-references": "node ./dev-utils/replace-references.js",
+    "build:prod": "npm run build && npm run compress-images && npm run optimize-svgs && npm run replace-references"
+  },
+  "devDependencies": {
+    "sharp": "^0.34.1",
+    "svgo": "^3.3.2",
+    "terser": "^5.39.2",
+    "vite": "^7.0.0"
+  }
+}

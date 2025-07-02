@@ -1,0 +1,66 @@
+.hero {
+  background: url("#{$image-path}/triangles.svg") no-repeat left top / 33%;
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    min-height: 100vh;
+  }
+
+  &__header {
+    align-items: center;
+    display: flex;
+    gap: 2.5rem;
+  }
+
+  &__logo {
+    &:first-child {
+      width: 10.5rem;
+    }
+
+    &:last-child {
+      max-width: 8.5rem;
+    }
+  }
+
+  &__separator {
+    border-radius: 99px;
+    width: 2px;
+    height: 4rem;
+    background-color: $gray-700;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: flex-end;
+    width: calc(54% - 3rem);
+
+    &-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      gap: 2.5rem;
+      padding: {
+        top: 4rem;
+        bottom: 4rem;
+        left: 4rem;
+      }
+      max-width: 36rem;
+    }
+  }
+
+  &__description {
+    max-width: 27rem;
+  }
+
+  &__image {
+    max-height: 100vh;
+    flex: 1;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+}

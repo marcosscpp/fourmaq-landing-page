@@ -1,0 +1,19 @@
+html {
+  font-size: 125%;
+
+  @include respond-to("ultra") {
+    font-size: 112.5%;
+  }
+
+  @include respond-to("xxl") {
+    font-size: 93.75%;
+  }
+
+  @include respond-to("xl") {
+    font-size: 87.5%;
+  }
+
+  @include respond-to("md") {
+    font-size: 75%;
+  }
+}
