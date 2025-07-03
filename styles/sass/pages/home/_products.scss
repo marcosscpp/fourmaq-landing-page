@@ -1,0 +1,61 @@
+.products {
+  &__title {
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+  }
+
+  &__item {
+    align-items: flex-start;
+    background-color: $white;
+    border-radius: 0.75rem;
+    display: flex;
+    gap: 1rem;
+    flex-basis: calc(25% - 1rem);
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+    min-width: 15rem;
+    padding: 1.75rem;
+
+    &-icon {
+      background-color: $red-300;
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.75rem;
+    }
+
+    &-text {
+      font-weight: 600;
+      font-size: 1.375rem;
+    }
+
+    &-divider {
+      border: 1px solid $gray-100;
+      border-radius: 99px;
+      width: 100%;
+      max-width: 2.5rem;
+    }
+  }
+}
+
+@mixin products-sm-max {
+  .products {
+    &__list {
+      flex-direction: column;
+    }
+
+    &__item {
+      align-items: center;
+    }
+  }
+}

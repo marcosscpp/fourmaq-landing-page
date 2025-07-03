@@ -3,7 +3,6 @@
   border-radius: 99px;
   display: flex;
   gap: 1rem;
-  flex-wrap: wrap;
   justify-content: space-between;
   margin: {
     left: auto;
@@ -34,6 +33,8 @@
 
   &--outline {
     border: 1px solid $white;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   &--primary &__icon {
