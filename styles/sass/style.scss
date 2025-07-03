@@ -8,6 +8,8 @@
 /********************
 ** Base **
 */
+
+@import "base/backgrounds";
 @import "base/fonts";
 @import "base/reset";
 @import "base/scale";
@@ -28,3 +30,7 @@
 ** Pages **
 */
 @import "pages/home/hero";
+@import "pages/home/vsl";
+@import "pages/home/pros";
+@import "pages/home/delivery";
+@import "pages/home/responsive";

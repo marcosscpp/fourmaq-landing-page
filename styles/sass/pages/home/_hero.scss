@@ -2,6 +2,7 @@
   background: url("#{$image-path}/triangles.svg") no-repeat left top / 33%;
 
   &__container {
+    align-items: center;
     display: flex;
     flex-wrap: wrap;
     gap: 3rem;
@@ -12,6 +13,7 @@
     align-items: center;
     display: flex;
     gap: 2.5rem;
+    margin-bottom: 1rem;
   }
 
   &__logo {
@@ -42,7 +44,7 @@
       justify-content: flex-end;
       gap: 2.5rem;
       padding: {
-        top: 4rem;
+        top: 2rem;
         bottom: 4rem;
         left: 4rem;
       }
@@ -50,17 +52,23 @@
     }
   }
 
+  &__title {
+    margin-bottom: 0;
+  }
+
   &__description {
     max-width: 27rem;
   }
 
   &__image {
-    max-height: 100vh;
     flex: 1;
-
     img {
       object-fit: cover;
       width: 100%;
     }
+  }
+
+  &__button {
+    margin: 0;
   }
 }

@@ -1,0 +1,21 @@
+.vsl {
+  box-shadow: 0 1rem 1rem 0 rgba($white, 0.1);
+  position: relative;
+
+  &__background {
+    background: url("#{$image-path}/vsl-background.svg") no-repeat center top / cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__video {
+    border-radius: 1.25rem;
+    overflow: hidden;
+    margin: 0 auto;
+    max-width: 44rem;
+    position: relative;
+  }
+}

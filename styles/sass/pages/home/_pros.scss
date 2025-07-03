@@ -1,0 +1,41 @@
+.pros {
+  margin-top: 2.5rem;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  &__item {
+    align-items: center;
+    background-color: $white;
+    border-radius: 1rem;
+    display: flex;
+    flex-basis: calc(50% - 0.5rem);
+    flex-grow: 1;
+    gap: 1rem;
+    min-width: 20rem;
+    padding: 1rem;
+
+    &-icon {
+      flex-shrink: 0;
+      width: 3rem;
+    }
+
+    &-description {
+      line-height: 1.5;
+      text-align: left;
+    }
+  }
+}
+
+@mixin pros-item-md-max {
+  .pros {
+    &__list {
+      flex-direction: column;
+      max-width: 40rem;
+      margin: 0 auto;
+    }
+  }
+}

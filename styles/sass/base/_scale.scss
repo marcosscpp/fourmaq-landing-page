@@ -10,7 +10,7 @@ html {
   }
 
   @include respond-to("xl") {
-    font-size: 87.5%;
+    font-size: 80%;
   }
 
   @include respond-to("md") {

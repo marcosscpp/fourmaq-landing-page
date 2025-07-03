@@ -1,0 +1,19 @@
+.delivery {
+  &__container {
+    align-items: center;
+    display: flex;
+    gap: 2rem 0;
+    justify-content: center;
+    padding: {
+      top: 3.5rem;
+      bottom: 3.5rem;
+    }
+  }
+
+  &__description {
+    max-width: 28rem;
+  }
+
+  &__image {
+  }
+}

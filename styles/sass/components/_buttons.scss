@@ -5,6 +5,11 @@
   gap: 1rem;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin: {
+    left: auto;
+    right: auto;
+    top: 2.5rem;
+  }
   width: fit-content;
 
   &__text {
@@ -27,13 +32,24 @@
     box-shadow: 0 0.5rem 1.5rem 0 rgba($red-300, 0.3);
   }
 
+  &--outline {
+    border: 1px solid $white;
+  }
+
   &--primary &__icon {
-    align-items: center;
     background-color: $red-500;
+  }
+
+  &--outline &__icon {
+    border: 1px solid $white;
+  }
+
+  &__icon {
+    align-items: center;
     border-radius: inherit;
     display: flex;
+    height: 3rem;
     justify-content: center;
-    height: 100%;
     padding: 0.5rem 1.25rem;
   }
 }
