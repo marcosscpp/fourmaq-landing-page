@@ -2,7 +2,8 @@
   &__container {
     align-items: center;
     display: flex;
-    gap: 2rem 0;
+    flex-wrap: wrap;
+    gap: 3rem 0;
     justify-content: center;
     padding: {
       top: 3.5rem;
@@ -15,5 +16,22 @@
   }
 
   &__image {
+    max-width: 28rem;
+  }
+}
+
+@mixin delivery-sm-max {
+  .delivery {
+    &__image {
+      max-width: 22rem;
+    }
+
+    &__description {
+      text-wrap: balance;
+      margin: {
+        left: auto;
+        right: auto;
+      }
+    }
   }
 }

@@ -1,10 +1,12 @@
 .bg-red {
   background-color: $red-300;
 
-  &--pattern {
-    background-image: url("#{$image-path}/fourmaq-symbol-bg.svg");
-    background-repeat: no-repeat;
-    background-position: bottom center;
-    background-size: 115%;
+  @include respond-to("md", $type: "min") {
+    &--pattern {
+      background-image: url("#{$image-path}/fourmaq-symbol-bg.svg");
+      background-repeat: no-repeat;
+      background-position: bottom center;
+      background-size: 125%;
+    }
   }
 }

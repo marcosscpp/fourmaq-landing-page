@@ -42,7 +42,7 @@
   }
 
   &--outline &__icon {
-    border: 1px solid $white;
+    outline: 1px solid $white;
   }
 
   &__icon {
@@ -52,5 +52,9 @@
     height: 3rem;
     justify-content: center;
     padding: 0.5rem 1.25rem;
+
+    @include respond-to("sm") {
+      height: 3.5rem;
+    }
   }
 }

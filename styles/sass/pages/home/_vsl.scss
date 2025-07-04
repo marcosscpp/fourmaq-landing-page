@@ -3,7 +3,8 @@
   position: relative;
 
   &__background {
-    background: url("#{$image-path}/vsl-background.svg") no-repeat center top / cover;
+    background: url("#{$image-path}/vsl-background.svg") no-repeat center top /
+      cover;
     position: absolute;
     top: 0;
     left: 0;
@@ -17,5 +18,11 @@
     margin: 0 auto;
     max-width: 44rem;
     position: relative;
+  }
+}
+
+@mixin vsl-sm-max {
+  .vsl__container {
+    padding-top: 0;
   }
 }
