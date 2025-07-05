@@ -22,7 +22,7 @@
     color: $white;
   }
 
-  @include respond-to("sm") {
+  @include respond-to("md") {
     font-size: 2rem;
     text-align: center;
   }
