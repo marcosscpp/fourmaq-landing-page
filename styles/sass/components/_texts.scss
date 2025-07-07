@@ -25,6 +25,14 @@
   @include respond-to("md") {
     font-size: 2rem;
     text-align: center;
+    margin: {
+      left: auto;
+      right: auto;
+    }
+  }
+
+  @include respond-to("xs", $type: "max") {
+    font-size: 1.5rem;
   }
 }
 
@@ -39,5 +47,9 @@
 
   @include respond-to("md") {
     text-align: center;
+    margin: {
+      left: auto;
+      right: auto;
+    }
   }
 }

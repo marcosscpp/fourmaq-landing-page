@@ -1,0 +1,119 @@
+.excelence {
+  &__container {
+    padding-bottom: 2rem;
+  }
+
+  &__header {
+    align-items: flex-end;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+  }
+
+  &__title {
+    margin-bottom: 0;
+    max-width: 20rem;
+  }
+
+  &__description {
+    max-width: 39rem;
+  }
+
+  &__content {
+    background: $white;
+    border-radius: 1.25rem;
+    margin-top: 2rem;
+    padding: 3rem 2rem;
+  }
+
+  &__subtitle {
+    text-align: center;
+  }
+
+  &__cards {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem 6rem;
+  }
+
+  &__card {
+    border-radius: 0.75rem;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    overflow: hidden;
+    min-width: 14rem;
+    max-width: 20rem;
+    position: relative;
+
+    &-image {
+      height: 7.5rem;
+
+      img {
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+      }
+    }
+
+    &-content {
+      background: $red-300;
+      color: $white;
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      font-size: 1.25rem;
+      gap: 2rem;
+      justify-content: space-between;
+      padding: 1.25rem 2.25rem;
+      position: relative;
+
+      &::before,
+      &::after {
+        background: $white;
+        content: "";
+        display: block;
+        height: 2px;
+        width: 3.25rem;
+      }
+
+      &::before {
+        position: absolute;
+        top: 0;
+      }
+    }
+  }
+
+  &__thanks {
+    font-size: 1.25rem;
+    margin-top: 4rem;
+    line-height: 1.6;
+    text-align: center;
+    text-wrap: balance;
+  }
+}
+
+@mixin excelence-lg-max {
+  .excelence {
+    &__header {
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+}
+
+@mixin excelence-sm-max {
+  .excelence {
+    &__container {
+      border-radius: 0;
+      padding: 0;
+    }
+
+    &__header {
+      padding: 3.5rem 2rem 0;
+    }
+  }
+}

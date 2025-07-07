@@ -78,39 +78,39 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         "last_name" => $lastName,
                         "custom_fields_values" => [
                             [
-                                "field_id" => 542024,
+                                "field_id" => 976988,
                                 "values" => [["value" => $formattedPhone]]
                             ],
                             [
-                                "field_id" => 1015266,
+                                "field_id" => 978832,
                                 "values" => [["value" => $state]]
                             ],
                             [
-                                "field_id" => 1015268,
+                                "field_id" => 978828,
                                 "values" => [["value" => $city]]
                             ],
                             [
-                                "field_id" => 1015270,
+                                "field_id" => 978836,
                                 "values" => [["value" => $preference]]
                             ],
                             [
-                                "field_id" => 1015272,
+                                "field_id" => 978838,
                                 "values" => [["value" => $urgency]]
                             ],
                             [
-                                "field_id" => 1006990,
+                                "field_id" => 978840,
                                 "values" => [["value" => $utm_content]]
                             ],
                             [
-                                "field_id" => 1006988,
+                                "field_id" => 978842,
                                 "values" => [["value" => $utm_campaign]]
                             ],
                             [
-                                "field_id" => 1006986,
+                                "field_id" => 978844,
                                 "values" => [["value" => $utm_medium]]
                             ],
                             [
-                                "field_id" => 1006984,
+                                "field_id" => 978846,
                                 "values" => [["value" => $utm_source]]
                             ]
                         ]

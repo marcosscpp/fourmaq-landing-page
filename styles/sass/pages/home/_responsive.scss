@@ -1,18 +1,19 @@
 @include respond-to("lg", $type: "max") {
   @include hero-lg-max;
+  @include promo-lg-max;
+  @include excelence-lg-max;
+  @include final-call-lg-max;
 }
 
 @include respond-to("lg", $type: "min") {
   @include hero-lg-min;
 }
 
-
 @include respond-to("md", $type: "max") {
   @include pros-item-md-max;
   @include testimony-md-max;
-  @include promo-md-max;
+  @include final-call-md-max;
 }
-
 
 @include respond-to("sm", $type: "min") {
   @include contact-sm-min;
@@ -25,4 +26,5 @@
   @include vsl-sm-max;
   @include promo-sm-max;
   @include contact-sm-max;
+  @include excelence-sm-max;
 }

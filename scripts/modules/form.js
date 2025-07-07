@@ -57,7 +57,8 @@ export default class BasicForm {
 
     form.addEventListener("submit", async (event) => {
       event.preventDefault();
-      const loader = form.querySelector("[data-loader]");
+      const loader = document.querySelector("[data-loader]");
+      const errorBox = document.querySelector("[data-error-box]");
       const formData = new FormData(form);
       const submitButton = form.querySelector("[type='submit']");
 
@@ -68,14 +69,18 @@ export default class BasicForm {
       });
 
       try {
+        if (errorBox.classList.contains("active")) {
+          errorBox.classList.remove("active");
+        }
+
         submitButton.disabled = true;
         loader.classList.add("active");
-        const metaApiResponse = await fetch("./php/pixel-submit.php", {
+        const metaApiResponse = await fetch("../php/pixel-submit.php", {
           method: "POST",
           body: formData,
         });
 
-        const crmResponse = await fetch("./php/submit.php", {
+        const crmResponse = await fetch("../php/submit.php", {
           method: "POST",
           body: formData,
         });
@@ -83,13 +88,17 @@ export default class BasicForm {
         const result = await crmResponse.json();
 
         if (result.erro) {
+          errorBox.innerText = result.erro;
+          errorBox.classList.add("active");
         } else {
+          window.open("./obrigado", "_blank");
         }
       } catch (error) {
-        console.log(error);
+        errorBox.innerText = "Ocorreu um erro ao enviar o formulário. Por favor, tente novamente.";
+        errorBox.classList.add("active");
       } finally {
-        loader.classList.remove("active");
         submitButton.disabled = false;
+        loader.classList.remove("active");
       }
     });
   }

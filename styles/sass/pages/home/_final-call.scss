@@ -1,0 +1,61 @@
+.final-call {
+  &__container {
+    padding-top: 0;
+    padding-bottom: 4rem;
+  }
+
+  &__content {
+    background: $gray-800;
+    color: $white;
+    border-radius: 1.25rem;
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    padding: 3rem 2rem;
+  }
+
+  &__title {
+    margin-bottom: 0;
+    max-width: 45rem;
+    line-height: 1.4;
+
+    strong {
+      font-weight: 700;
+    }
+  }
+
+  &__description {
+    color: inherit;
+    font-size: 1.25rem;
+    max-width: 28rem;
+  }
+}
+
+@mixin final-call-lg-max {
+  .final-call {
+    &__content {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    &__description,
+    &__title {
+      margin: {
+        left: auto;
+        right: auto;
+      }
+    }
+  }
+}
+
+@mixin final-call-md-max {
+  .final-call {
+    &__container {
+      padding: 0;
+    }
+
+    &__content {
+      border-radius: 0;
+    }
+  }
+}

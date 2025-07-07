@@ -29,10 +29,11 @@
   }
 }
 
-@mixin promo-md-max {
+@mixin promo-lg-max {
   .promo {
     &__content,
     &__description {
+      text-align: center;
       margin: {
         left: auto;
         right: auto;
@@ -48,6 +49,7 @@
 @mixin promo-sm-max {
   .promo {
     &__content {
+      text-align: center;
       gap: 0;
     }
 

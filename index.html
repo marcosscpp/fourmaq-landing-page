@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Fourmaq - Maior concessionária Massey Ferguson do Brasil. Entrega em até 24h para todo o país. Líder nacional em excelência!">
+  <link rel="canonical" href="https://fourmaq.com.br/">
 
   <link rel="stylesheet" href="./styles/css/style.css">
   <script type="module" src="./scripts/script.js" defer></script>
@@ -59,7 +61,7 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TQL2GVGG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   <main>
-    <section class="hero">
+    <section class="hero" id="topo">
       <div class="hero__container">
         <div class="hero__content">
           <div class="hero__content-container">
@@ -497,6 +499,9 @@
       </div>
 
       <div class="contact__form-container">
+        <div class="contact__loader" data-loader>
+          <div class="loader"></div>
+        </div>
         <form class="contact__form">
           <div class="contact__form-field">
             <input class="contact__input" type="text" id="nome" name="nome" placeholder="Nome completo" required aria-required="true" aria-label="Nome completo" />
@@ -547,15 +552,15 @@
             <div class="contact__select-wrapper">
               <select class="contact__select" id="urgencia" name="urgencia" required aria-required="true" aria-label="Urgência da entrega">
                 <option value="" disabled selected>Urgência da entrega</option>
-                <option value="24h">Até 24h</option>
-                <option value="3d">1-3 dias</option>
-                <option value="normal">4+ dias</option>
+                <option value="Até 24 horas">Até 24 horas</option>
+                <option value="1 a 3 dias">1 a 3 dias</option>
+                <option value="4 dias ou mais">4 dias ou mais</option>
               </select>
               <img class="contact__select-arrow" src="./assets/icons/chevron-down.svg" loading="lazy" alt="" aria-hidden="true">
               <span class="contact__error" aria-live="polite" data-error></span>
             </div>
           </div>
-
+          <div class="contact__error-box" data-error-box></div>
           <button class="contact__button" type="submit">
             QUERO COMPRAR MINHA PEÇA AGORA
           </button>
@@ -564,7 +569,203 @@
     </div>
   </section>
 
-  <footer></footer>
+  <section class="excelence">
+    <div class="excelence__container container">
+      <header class="excelence__header">
+        <h2 class="excelence__title title title--primary">
+          <strong>Fourmaq:</strong> Líder Nacional em Excelência!
+        </h2>
+        <p class="excelence__description text">
+          Em 2024, a Fourmaq conquistou o <strong>1º lugar no ranking nacional de concessionárias Massey Ferguson,</strong> recebendo o prêmio <strong>Dealer Excellence 2024.</strong> Essa conquista reforça nosso compromisso com a qualidade, eficiência e dedicação ao produtor rural.
+        </p>
+      </header>
+      <div class="excelence__content">
+        <h2 class="excelence__subtitle title title--primary">
+          <strong>Destaques:</strong>
+        </h2>
+        <ul class="excelence__cards">
+          <!-- Card 1 -->
+          <li class="excelence__card">
+            <div class="excelence__card-image">
+              <img src="./assets/images/tractor-1.jpg" loading="lazy" alt="">
+            </div>
+            <div class="excelence__card-content">
+              <p><strong>Pós-venda ágil e eficiente:</strong> Para que você nunca pare no campo.</p>
+            </div>
+          </li>
+          <!-- Card 2 -->
+          <li class="excelence__card">
+            <div class="excelence__card-image">
+              <img src="./assets/images/tractor-3.jpg" loading="lazy" alt="">
+            </div>
+            <div class="excelence__card-content">
+              <p><strong>Soluções personalizadas:</strong> Cada cliente é único e merece o melhor.</p>
+            </div>
+          </li>
+          <!-- Card 3 -->
+          <li class="excelence__card">
+            <div class="excelence__card-image">
+              <img src="./assets/images/tractor-2.jpg" loading="lazy" alt="">
+            </div>
+            <div class="excelence__card-content">
+              <p><strong>Confiança e excelência:</strong> Sempre ao seu lado, com a garantia Massey Ferguson.</p>
+            </div>
+          </li>
+        </ul>
+        <footer class="excelence__thanks">
+          <p><strong>Essa vitória é compartilhada com todos os nossos clientes e parceiros.</strong></p>
+          <p class="title--primary"><strong>OBRIGADO POR CONFIAR NA FOURMAQ!</strong></p>
+        </footer>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-call">
+    <div class="final-call__container container">
+      <div class="final-call__content">
+        <h2 class="final-call__title title title--secondary">
+          Expansão Estratégica:<br> <strong>Aquisição da Mardisa Máquinas</strong>
+        </h2>
+        <p class="final-call__description text text--white">
+          Em dezembro de 2023, a Fourmaq ampliou sua atuação para os estados do Maranhão e Piauí ao adquirir a totalidade do capital social da Mardisa Máquinas, fortalecendo ainda mais nossa presença no agronegócio nacional.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="branches bg-red">
+    <div class="branches__container container">
+      <header class="branches__header">
+        <h2 class="branches__title title title--secondary">
+          Conheça <strong>Nossas Lojas:</strong>
+        </h2>
+        <p class="branches__description text text--white">
+          Com unidades estrategicamente localizadas em Tocantins, Maranhão, Piauí e Goiás, a Fourmaq está sempre próxima de você. Nossa estrutura física moderna e nosso atendimento consultivo garantem o suporte que seu campo precisa.
+        </p>
+      </header>
+      <ul class="branches__list">
+        <li class="branches__item">
+          <div class="branches__item-icon">
+            <img src="./assets/icons/pin-fourmaq.svg" loading="lazy" alt="Localização Fourmaq">
+          </div>
+          <div class="branches__item-content">
+            <h3 class="branches__item-title">Matriz Palmas</h3>
+            <p class="branches__item-address">Quadra 912 Sul, Plano Diretor Sul<br>77.023-464 / Palmas / TO</p>
+            <p class="branches__item-contact">Tel: <strong>(63) 3233-5555</strong></p>
+            <p class="branches__item-email">E-mail: <strong>fourmaq@fourmaq.com.br</strong></p>
+          </div>
+        </li>
+
+        <li class="branches__item">
+          <div class="branches__item-icon">
+            <img src="./assets/icons/pin-fourmaq.svg" loading="lazy" alt="Localização Fourmaq">
+          </div>
+          <div class="branches__item-content">
+            <h3 class="branches__item-title">Filial Gurupi</h3>
+            <p class="branches__item-address">Rod BR-153, KM 669, Perímetro Urbano<br>77420-000 / Gurupi / TO</p>
+            <p class="branches__item-contact">Tel: <strong>(63) 3901-5500</strong></p>
+            <p class="branches__item-email">E-mail: <strong>gurupi@fourmaq.com.br</strong></p>
+          </div>
+        </li>
+
+        <li class="branches__item">
+          <div class="branches__item-icon">
+            <img src="./assets/icons/pin-fourmaq.svg" loading="lazy" alt="Localização Fourmaq">
+          </div>
+          <div class="branches__item-content">
+            <h3 class="branches__item-title">Filial Porangatu</h3>
+            <p class="branches__item-address">Rua Ademérico de Azevedo, Lote 04, Jardim Brasília<br>76.550-000 / Porangatu / GO</p>
+            <p class="branches__item-contact">Tel: <strong>(62) 99843-1660</strong></p>
+            <p class="branches__item-email">E-mail: <strong>porangatu@fourmaq.com.br</strong></p>
+          </div>
+        </li>
+
+        <li class="branches__item">
+          <div class="branches__item-icon">
+            <img src="./assets/icons/pin-fourmaq.svg" loading="lazy" alt="Localização Fourmaq">
+          </div>
+          <div class="branches__item-content">
+            <h3 class="branches__item-title">Filial Balsas</h3>
+            <p class="branches__item-address">Av. Gov. Luiz Rocha, 2010, Lote 3, São Félix<br>65.800-000 / Balsas / MA</p>
+            <p class="branches__item-contact">Tel: <strong>(99) 99843-6326</strong></p>
+            <p class="branches__item-email">E-mail: <strong>balsas@fourmaq.com.br</strong></p>
+          </div>
+        </li>
+
+        <li class="branches__item">
+          <div class="branches__item-icon">
+            <img src="./assets/icons/pin-fourmaq.svg" loading="lazy" alt="Localização Fourmaq">
+          </div>
+          <div class="branches__item-content">
+            <h3 class="branches__item-title">Filial Imperatriz</h3>
+            <p class="branches__item-address">Rod. BR-010, Setor 7, Maranhão Novo<br>65.903-140 / Imperatriz / MA</p>
+            <p class="branches__item-contact">Tel: <strong>(63) 3901-5746</strong></p>
+            <p class="branches__item-email">E-mail: <strong>imperatriz@fourmaq.com.br</strong></p>
+          </div>
+        </li>
+
+        <li class="branches__item">
+          <div class="branches__item-icon">
+            <img src="./assets/icons/pin-fourmaq.svg" loading="lazy" alt="Localização Fourmaq">
+          </div>
+          <div class="branches__item-content">
+            <h3 class="branches__item-title">Filial Teresina</h3>
+            <p class="branches__item-address">Av. Pref. Wall Ferraz, Parque Pioneiro, N 12100, Santo Antônio<br>64.028-355 / Teresina / PI</p>
+            <p class="branches__item-contact">Tel: <strong>(86) 98171-5982</strong></p>
+            <p class="branches__item-email">E-mail: <strong>teresina@fourmaq.com.br</strong></p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer__container container">
+      <header class="footer__header">
+        <div class="footer__logo">
+          <img src="./assets/images/massey-ferguson.png" loading="lazy" alt="Massey Ferguson">
+        </div>
+        <div class="footer__logo">
+          <img src="./assets/images/fourmaq.png" loading="lazy" alt="Fourmaq">
+        </div>
+      </header>
+
+      <p class="footer__contact">
+        Atendimento de Segunda a Sábado | Loja abre às 6h na safra
+      </p>
+
+      <ul class="footer__social">
+        <li class="footer__social-item">
+          <a class="footer__social-link" href="https://www.facebook.com/fourmaq.palmas/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <img src="./assets/icons/facebook.svg" loading="lazy" alt="Facebook">
+          </a>
+        </li>
+
+        <li class="footer__social-item">
+          <a class="footer__social-link" href="https://www.instagram.com/fourmaq/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <img src="./assets/icons/instagram.svg" loading="lazy" alt="Instagram">
+          </a>
+        </li>
+
+        <li class="footer__social-item">
+          <a class="footer__social-link" href="https://www.youtube.com/@fourmaq" target="_blank" rel="noopener noreferrer" aria-label="Youtube">
+            <img src="./assets/icons/youtube.svg" loading="lazy" alt="Youtube">
+          </a>
+        </li>
+      </ul>
+
+      <p class="footer__powered">
+        <span>
+          Powered by <a href="https://omniainteligenciadigital.com.br/" target="_blank" rel="noopener noreferrer">Omnia Inteligência Digital</a>
+        </span>
+
+        <a href="#topo" class="footer__button" aria-label="Voltar ao topo">
+          <img src="./assets/icons/arrow-up.svg" loading="lazy" alt="">
+        </a>
+      </p>
+    </div>
+
+    </div>
+  </footer>
 </body>
 
 </html>

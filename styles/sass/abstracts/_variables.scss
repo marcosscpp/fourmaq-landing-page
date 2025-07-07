@@ -1,13 +1,22 @@
 // Fonts
 $primary-font: "Stara", sans-serif;
 
+$red-100: hwb(0 79% 13%);
 $red-300: hwb(0 1% 27%);
+$red-400: hwb(0 1% 38%);
 $red-500: hwb(359 11% 47%);
+$red-600: hwb(359 11% 57%);
+
+
+$green-200: hwb(147 4% 25%);
+$green-500: hwb(147 6% 48%);
 
 $white: hwb(0 100% 0%);
 $gray-50: hwb(0 95% 5%);
 $gray-100: hwb(0 88% 12%);
+$gray-200: hwb(0 80% 20%);
 $gray-700: hwb(0 30% 70%);
+$gray-800: hwb(240 20% 78%);
 $gray-900: hwb(0 17% 83%);
 
 $black: hwb(0 0% 100%);

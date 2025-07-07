@@ -2,15 +2,15 @@
   "name": "fourmaq",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
     "sass": "node ./dev-utils/sass-watch.js",
-    "compress-images": "node ./dev-utils/compress-images.js",
-    "optimize-svgs": "node ./dev-utils/optimize-svg.js",
-    "replace-references": "node ./dev-utils/replace-references.js",
+    "compress-images": "node ./compress-images.js",
+    "optimize-svgs": "node ./optimize-svg.js",
+    "replace-references": "node ./replace-references.js",
     "build:prod": "npm run build && npm run compress-images && npm run optimize-svgs && npm run replace-references"
   },
   "devDependencies": {

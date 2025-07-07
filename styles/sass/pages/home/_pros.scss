@@ -32,10 +32,6 @@
 
 @mixin pros-item-md-max {
   .pros {
-    &__title {
-      text-align: center;
-    }
-    
     &__list {
       flex-direction: column;
       max-width: 40rem;

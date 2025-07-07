@@ -1,0 +1,27 @@
+.branches {
+  &__description {
+    font-size: 1.25rem;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 1.5rem;
+  }
+
+  &__item {
+    flex: 1 1 calc(30% - 2rem);
+    color: $white;
+    display: flex;
+    font-size: 0.8125rem;
+
+    &-icon {
+      margin-right: 0.5rem;
+    }
+
+    &:nth-child(3n) {
+      flex-basis: calc(40% - 2rem);
+    }
+  }
+}
