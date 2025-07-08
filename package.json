@@ -2,7 +2,7 @@
   "name": "fourmaq",
   "private": true,
   "version": "0.0.0",
-  "type": "commonjs",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -14,6 +14,7 @@
     "build:prod": "npm run build && npm run compress-images && npm run optimize-svgs && npm run replace-references"
   },
   "devDependencies": {
+    "rollup-plugin-terser": "^7.0.2",
     "sharp": "^0.34.1",
     "svgo": "^3.3.2",
     "terser": "^5.39.2",
