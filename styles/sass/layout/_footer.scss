@@ -4,7 +4,7 @@
   text-align: center;
 
   &__container {
-    padding: 2rem ;
+    padding: 2rem 0;
   }
 
   &__header {
@@ -91,5 +91,14 @@
         filter: brightness(0);
       }
     }
+  }
+
+  &__link {
+    cursor: pointer;
+    color: $white;
+    font-size: 1.125rem;
+    margin-top: 1.5rem;
+    text-decoration: underline;
+    text-transform: uppercase;
   }
 }

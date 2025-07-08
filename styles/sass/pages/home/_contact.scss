@@ -88,8 +88,9 @@
   &__input,
   &__select {
     background: $white;
-    border: 1px solid transparent;
+    border: 1px solid $gray-200;
     border-radius: 0.5rem;
+    font-family: $primary-font;
     font-size: 1rem;
     height: 2.75rem;
     padding: 0 1rem;
@@ -120,9 +121,22 @@
 
     option {
       color: $gray-900;
+      background: $white;
+      padding: 0.5rem;
     }
     option:first-child {
       color: $gray-700;
+    }
+    option:disabled {
+      color: $gray-700;
+      font-style: italic;
+    }
+
+    &:invalid {
+      color: $gray-700;
+    }
+    &:valid {
+      color: $gray-900;
     }
   }
 
@@ -135,9 +149,73 @@
       position: absolute;
       right: 1rem;
       top: 0;
-      transform: translateY(1rem);
+      transform: translateY(60%);
       width: 16px;
     }
+  }
+
+  &__checkbox-wrapper {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+  }
+
+  &__checkbox {
+    appearance: none;
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 2px solid $gray-200;
+    border-radius: 0.25rem;
+    background: $white;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+
+    &:hover {
+      border-color: $gray-900;
+    }
+
+    &:focus {
+      border-color: $red-500;
+      box-shadow: 0 0 0 2px rgba(209, 0, 0, 0.1);
+      outline: none;
+    }
+
+    &:checked {
+      background: $red-300;
+      border-color: $red-300;
+
+      &::before {
+        content: "✓";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: $white;
+        font-size: 0.875rem;
+        font-weight: bold;
+      }
+    }
+
+    &.error {
+      border-color: $red-300;
+      box-shadow: 0 0 0 2px rgba(209, 0, 0, 0.1);
+    }
+  }
+
+  &__checkbox-label {
+    font-size: 1rem;
+    color: $gray-900;
+    cursor: pointer;
+  }
+
+  &__checkbox-link {
+    cursor: pointer;
+    color: $red-300;
+    text-decoration: underline;
   }
 
   &__error {

@@ -14,4 +14,4 @@ const modal = new Modal(
   "[data-modal='open']",
   "[data-modal='close']",
   "[data-modal='container']"
-);
+).init();

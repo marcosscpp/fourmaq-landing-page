@@ -509,6 +509,11 @@
           </div>
 
           <div class="contact__form-field">
+            <input class="contact__input" type="email" id="email" name="email" placeholder="Email" required aria-required="true" aria-label="Email" />
+            <span class="contact__error" aria-live="polite" data-error></span>
+          </div>
+
+          <div class="contact__form-field">
             <input class="contact__input" type="tel" id="telefone" name="telefone" placeholder="Telefone com WhatsApp" required aria-required="true" aria-label="Telefone com WhatsApp" />
             <span class="contact__error" aria-live="polite" data-error></span>
           </div>
@@ -557,6 +562,17 @@
                 <option value="4 dias ou mais">4 dias ou mais</option>
               </select>
               <img class="contact__select-arrow" src="./assets/icons/chevron-down.svg" loading="lazy" alt="" aria-hidden="true">
+              <span class="contact__error" aria-live="polite" data-error></span>
+            </div>
+          </div>
+          <div class="contact__form-field">
+            <div class="contact__checkbox-wrapper">
+              <input type="checkbox" id="termos" name="termos" class="contact__checkbox" required aria-required="true">
+              <span>
+                <label for="termos" class="contact__checkbox-label">
+                  Concordo com os
+                </label><a data-modal="open" class="contact__checkbox-link">termos e condições</a>
+              </span>
               <span class="contact__error" aria-live="polite" data-error></span>
             </div>
           </div>
@@ -757,17 +773,50 @@
         <span>
           Powered by <a href="https://omniainteligenciadigital.com.br/" target="_blank" rel="noopener noreferrer">Omnia Inteligência Digital</a>
         </span>
-
         <a href="#topo" class="footer__button" aria-label="Voltar ao topo">
           <img src="./assets/icons/arrow-up.svg" loading="lazy" alt="">
         </a>
-
-        <button></button>
       </p>
-    </div>
-
+      <a class="footer__link" data-modal="open">Termos e condições</a>
     </div>
   </footer>
+  <div class="modal" data-modal="container">
+    <div class="modal__content">
+      <button type="button" class="modal__close" data-modal="close" aria-label="Fechar modal">
+        <img src="./assets/icons/close.svg" loading="lazy" alt="">
+      </button>
+      <h2 class="modal__title">Termo de Consentimento para Tratamento de Dados Pessoais – Fourmaq</h2>
+
+      <div class="modal__body">
+        <p>Ao preencher e enviar seus dados nesta página, você declara estar ciente e de acordo com os termos abaixo, nos moldes da Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018 – LGPD):</p>
+
+        <div class="modal__section">
+          <h3 class="modal__subtitle">1. Finalidade do Tratamento:</h3>
+          <p>Seus dados pessoais (como nome, telefone, e-mail, cidade/estado e demais informações fornecidas) serão utilizados pela Fourmaq exclusivamente para fins de contato comercial, atendimento consultivo, envio de cotações, ofertas de produtos e serviços relacionados à venda de peças, acessórios, manutenção e soluções agrícolas.</p>
+        </div>
+
+        <div class="modal__section">
+          <h3 class="modal__subtitle">2. Compartilhamento de Dados:</h3>
+          <p>Os dados poderão ser compartilhados internamente entre os times de marketing e vendas da Fourmaq, bem como com representantes autorizados e unidades regionais, sempre com a finalidade de prestar um atendimento mais ágil e personalizado. Não realizamos venda ou cessão de dados a terceiros.</p>
+        </div>
+
+        <div class="modal__section">
+          <h3 class="modal__subtitle">3. Segurança e Armazenamento:</h3>
+          <p>A Fourmaq adota medidas técnicas e administrativas para proteger seus dados contra acessos não autorizados e situações acidentais ou ilícitas de destruição, perda, alteração, comunicação ou difusão.</p>
+        </div>
+
+        <div class="modal__section">
+          <h3 class="modal__subtitle">4. Direitos do Titular:</h3>
+          <p>Você poderá, a qualquer momento, solicitar o acesso, correção, portabilidade ou exclusão de seus dados pessoais por meio dos canais oficiais da Fourmaq.</p>
+        </div>
+
+        <div class="modal__section">
+          <h3 class="modal__subtitle">5. Tempo de Retenção:</h3>
+          <p>Seus dados serão armazenados apenas pelo tempo necessário para cumprimento das finalidades mencionadas acima ou até que você solicite sua exclusão.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>

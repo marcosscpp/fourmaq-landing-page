@@ -35,8 +35,8 @@ function sendLeadRequest($data, $headers) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Campos do formulário
     $name = isset($_POST['nome']) ? trim($_POST['nome']) : '';
+    $email = isset($_POST['email']) ? trim($_POST['email']) : '';
     $phone = isset($_POST['telefone']) ? trim($_POST['telefone']) : '';
     $state = isset($_POST['estado']) ? trim($_POST['estado']) : '';
     $city = isset($_POST['cidade']) ? trim($_POST['cidade']) : '';
@@ -49,8 +49,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $utm_campaign = isset($_POST['utm_campaign']) ? htmlspecialchars($_POST['utm_campaign']) : 'Desconhecido';
     $utm_content = isset($_POST['utm_content']) ? htmlspecialchars($_POST['utm_content']) : 'Desconhecido';
 
-    if (empty($name) || empty($phone)) {
+    if (empty($name) || empty($email) || empty($phone)) {
         sendJsonResponse('error', 'Todos os campos são obrigatórios.');
+    }
+
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        sendJsonResponse('error', 'Email inválido.');
     }
 
     $formattedPhone = formatPhoneNumber($phone);
@@ -77,6 +81,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         "first_name" => $firstName,
                         "last_name" => $lastName,
                         "custom_fields_values" => [
+                            [
+                                "field_id" => 976990,
+                                "values" => [["value" => $email]]
+                            ],
                             [
                                 "field_id" => 976988,
                                 "values" => [["value" => $formattedPhone]]

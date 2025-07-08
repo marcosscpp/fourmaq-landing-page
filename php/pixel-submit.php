@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 'event_name' => 'Cadastro',
                 'event_time' => time(),
                 'action_source' => 'website',
-                'event_source_url' => 'https://fourmaq.com/',
+                'event_source_url' => 'https://lp.fourmaq.com.br/',
                 'user_data' => [
                     'ph' => $telefoneHash,
                     'fn' => $nomeHash,

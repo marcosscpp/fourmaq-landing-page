@@ -17,6 +17,11 @@ export default class BasicForm {
         patternMismatch: "Por favor, preencha um nome válido.",
         tooShort: "Por favor, preencha um nome válido.",
       },
+      email: {
+        valueMissing: "O campo de e-mail não pode estar vazio.",
+        typeMismatch: "Por favor, preencha um email válido.",
+        tooShort: "Por favor, preencha um email válido.",
+      },
       telefone: {
         valueMissing: "O campo de telefone não pode estar vazio.",
         patternMismatch: "Digite um número de telefone válido.",
@@ -33,6 +38,9 @@ export default class BasicForm {
       },
       urgencia: {
         valueMissing: "O campo de urgência não pode estar vazio.",
+      },
+      termos: {
+        valueMissing: "Você deve aceitar os termos e condições.",
       },
     };
 
@@ -94,7 +102,8 @@ export default class BasicForm {
           window.open("./obrigado", "_blank");
         }
       } catch (error) {
-        errorBox.innerText = "Ocorreu um erro ao enviar o formulário. Por favor, tente novamente.";
+        errorBox.innerText =
+          "Ocorreu um erro ao enviar o formulário. Por favor, tente novamente.";
         errorBox.classList.add("active");
       } finally {
         submitButton.disabled = false;
@@ -116,10 +125,17 @@ export default class BasicForm {
       }, 200);
 
       if (field.tagName === "INPUT") {
-        field.addEventListener("keyup", (e) => {
-          e.preventDefault();
-          checkFunc();
-        });
+        if (field.type === "checkbox") {
+          field.addEventListener("change", (e) => {
+            e.preventDefault();
+            checkFunc();
+          });
+        } else {
+          field.addEventListener("keyup", (e) => {
+            e.preventDefault();
+            checkFunc();
+          });
+        }
       } else if (field.tagName === "SELECT") {
         field.addEventListener("change", (e) => {
           e.preventDefault();
@@ -134,18 +150,15 @@ export default class BasicForm {
       tel.addEventListener("input", (e) => {
         let formattedNumber = e.target.value.replace(/\D/g, "");
 
-        if (formattedNumber.length > 13) {
-          formattedNumber = formattedNumber.slice(0, 13);
+        if (formattedNumber.length > 11) {
+          formattedNumber = formattedNumber.slice(0, 11);
         }
 
         if (formattedNumber.length > 2) {
-          const ddi = formattedNumber.slice(0, 2);
-          const restOfNumber = formattedNumber.slice(2);
-
-          let formatted = restOfNumber.replace(/^(\d{2})(\d)/g, "($1) $2");
+          let formatted = formattedNumber.replace(/^(\d{2})(\d)/g, "($1) $2");
           formatted = formatted.replace(/(\d)(\d{4})$/, "$1-$2");
 
-          formattedNumber = `+${ddi} ${formatted}`;
+          formattedNumber = formatted;
         }
 
         e.target.value = formattedNumber;

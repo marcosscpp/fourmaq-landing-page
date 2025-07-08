@@ -1,0 +1,114 @@
+.modal {
+  align-items: center;
+  background-color: rgba($black, 0.5);
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  left: 0;
+  opacity: 0;
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  transition: all 0.3s ease-in-out;
+  visibility: hidden;
+  width: 100%;
+  z-index: 9999;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__content {
+    background-color: $gray-50;
+    border-radius: 1rem;
+    box-shadow: 0 0.25rem 1rem rgba($gray-100, 0.1);
+    display: flex;
+    flex-direction: column;
+    max-height: 90vh;
+    max-width: 50rem;
+    padding: 3rem;
+    position: relative;
+    transform: translateY(-1.25rem);
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+
+    .active & {
+      transform: translateY(0);
+    }
+  }
+
+  &__close {
+    align-items: center;
+    background-color: $red-500;
+    border-radius: 50%;
+    border: 2px solid $white;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
+    transform: translate(50%, -50%);
+    transition: background-color 0.2s ease;
+    z-index: 2;
+
+    img {
+      height: 2rem;
+      width: 2rem;
+    }
+
+    &:hover {
+      background-color: $red-600;
+    }
+  }
+
+  &__title {
+    color: $red-300;
+    font-family: $primary-font;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-align: center;
+    text-wrap: balance;
+  }
+
+  &__body {
+    color: $gray-700;
+    flex: 1;
+    font-size: 1.125rem;
+    overflow-y: auto;
+
+    & > p:first-of-type {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__section {
+    margin-bottom: 1.5rem;
+  }
+
+  &__subtitle {
+    color: $red-600;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  @include respond-to("sm", "max") {
+    &__content {
+      max-height: 80vh;
+      width: 90%;
+      padding: 2rem;
+    }
+
+    &__title {
+      font-size: 1.5rem;
+    }
+
+    &__body {
+      font-size: 1rem;
+    }
+  }
+}
