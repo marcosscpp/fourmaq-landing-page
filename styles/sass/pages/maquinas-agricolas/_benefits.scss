@@ -1,0 +1,65 @@
+.benefits {
+  &__list {
+    background: url("#{$image-path}/massey-ferguson-gray-m.svg") no-repeat top
+      center / 25rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 12rem;
+    margin: 3rem auto;
+  }
+
+  &__item-content {
+    align-items: center;
+    background-color: $white;
+    border-radius: 99rem;
+    display: flex;
+    gap: 1rem;
+    font-size: 1.25rem;
+    padding: 0.25rem 0.5rem;
+  }
+
+  &__item-icon {
+    border: 2px solid $gray-100;
+    border-radius: 99rem;
+    padding: 0.5rem 1rem;
+  }
+
+  &__button {
+    margin-top: 0;
+    width: 100%;
+
+    .button__text {
+      width: 100%;
+
+      strong,
+      span {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+@mixin benefits-md-max {
+  .benefits {
+    &__list {
+      background: none;
+      grid-template-columns: 1fr;
+      max-width: 34rem;
+      margin: {
+        left: auto;
+        right: auto;
+      };
+    }
+  }
+}
+
+@mixin benefits-sm-max {
+  .benefits {
+    &__item-content {
+      border-radius: 1rem;
+      flex-direction: column;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+  }
+}

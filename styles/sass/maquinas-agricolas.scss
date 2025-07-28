@@ -19,9 +19,9 @@
 ** Layout **
 */
 @import "layout/container";
-@import "layout/footer";
-@import "layout/modal";
 @import "layout/branches";
+@import "layout/modal";
+@import "layout/footer";
 
 /********************
 ** Components **
@@ -32,15 +32,11 @@
 /********************
 ** Pages **
 */
-@import "pages/home/hero";
-@import "pages/home/vsl";
-@import "pages/home/about";
-@import "pages/home/pros";
-@import "pages/home/delivery";
-@import "pages/home/products";
-@import "pages/home/testimony";
-@import "pages/home/promo";
-@import "pages/home/contact";
-@import "pages/home/excelence";
-@import "pages/home/final-call";
-@import "pages/home/responsive";
+@import "pages/maquinas-agricolas/hero";
+@import "pages/maquinas-agricolas/vsl";
+@import "pages/maquinas-agricolas/benefits";
+@import "pages/maquinas-agricolas/about";
+@import "pages/maquinas-agricolas/testimony";
+@import "pages/maquinas-agricolas/faq";
+@import "pages/maquinas-agricolas/contact";
+@import "pages/maquinas-agricolas/responsive";

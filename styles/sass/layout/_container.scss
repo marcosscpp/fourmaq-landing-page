@@ -11,3 +11,17 @@
     width: 100% !important;
   }
 }
+
+.container2 {
+  margin: {
+    left: auto;
+    right: auto;
+  }
+  width: 75%;
+  padding: 5.5rem 2rem;
+
+  @include respond-to("lg") {
+    padding: 3.5rem 2rem;
+    width: 100% !important;
+  }
+}

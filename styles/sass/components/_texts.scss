@@ -22,6 +22,15 @@
     color: $white;
   }
 
+  &--center {
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+
   @include respond-to("md") {
     font-size: 2rem;
     text-align: center;
@@ -34,6 +43,16 @@
   @include respond-to("xs", $type: "max") {
     font-size: 1.5rem;
   }
+}
+
+.dark-title {
+  background-color: $gray-900;
+  border-radius: 99rem;
+  display: block;
+  font-weight: 700;
+  width: fit-content;
+  color: $white;
+  padding: 0 1rem;
 }
 
 .text {

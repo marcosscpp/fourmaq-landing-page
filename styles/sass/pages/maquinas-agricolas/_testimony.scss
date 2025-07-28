@@ -1,0 +1,73 @@
+.testimony {
+  background-color: $white;
+
+  &__title {
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem 4rem;
+    margin: 3rem auto;
+  }
+
+  &__item {
+    align-items: center;
+    justify-content: center;
+    background-color: $gray-50;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    position: relative;
+    flex: 0 1 22rem;
+
+    @include respond-to("sm") {
+      flex-grow: 1;
+    }
+
+    &-content {
+      color: $gray-950;
+      font-size: 1.25rem;
+      text-align: center;
+    }
+
+    &-name {
+      display: block;
+      margin-top: 0.5rem;
+    }
+
+    &-image {
+      position: relative;
+      width: 4.25rem;
+
+      img {
+        width: 100%;
+      }
+
+      &:before {
+        background: url("#{$icon-path}/blue-check.svg") no-repeat center center / cover;
+        bottom: -0.375rem;
+        content: "";
+        height: 1.5rem;
+        position: absolute;
+        right: -0.375rem;
+        width: 1.5rem;
+      }
+    }
+
+    &:before {
+      content: "";
+      background-color: $red-300;
+      height: 0.5rem;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      position: absolute;
+      width: 6rem;
+    }
+  }
+}

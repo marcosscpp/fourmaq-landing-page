@@ -27,18 +27,18 @@ export default class BasicForm {
         patternMismatch: "Digite um número de telefone válido.",
         tooShort: "O campo de celular não tem dígitos suficientes.",
       },
-      estado: {
-        valueMissing: "Selecione um estado.",
-      },
-      cidade: {
-        valueMissing: "Selecione uma cidade.",
-      },
-      preferencia: {
-        valueMissing: "O campo de preferência não pode estar vazio.",
-      },
-      urgencia: {
-        valueMissing: "O campo de urgência não pode estar vazio.",
-      },
+      // estado: {
+      //   valueMissing: "Selecione um estado.",
+      // },
+      // cidade: {
+      //   valueMissing: "Selecione uma cidade.",
+      // },
+      // preferencia: {
+      //   valueMissing: "O campo de preferência não pode estar vazio.",
+      // },
+      // urgencia: {
+      //   valueMissing: "O campo de urgência não pode estar vazio.",
+      // },
       termos: {
         valueMissing: "Você deve aceitar os termos e condições.",
       },

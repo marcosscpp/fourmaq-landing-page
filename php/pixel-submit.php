@@ -17,13 +17,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 
-    $state = isset($_POST['estado']) ? trim($_POST['estado']) : $geoData['region'] ?? '';
-    $city = isset($_POST['cidade']) ? trim($_POST['cidade']) : $geoData['city'] ?? '';
-
     $telefoneHash = hash('sha256', $telefone);
     $nomeHash = hash("sha256", $nome);
-    $estadoHash = hash('sha256', $state);
-    $cidadeHash = hash('sha256', $city);
+    $estadoHash = hash('sha256', $geoData['region']);
+    $cidadeHash = hash('sha256', $geoData['city']);
     $paisHash = hash('sha256', $geoData['country']);
     $zipHash = hash("sha256", $geoData['zip']);
 

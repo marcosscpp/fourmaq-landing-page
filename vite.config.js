@@ -10,6 +10,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, "index.html"),
         obrigado: resolve(__dirname, "obrigado.html"),
+        maquinasAgricolas: resolve(__dirname, "maquinas-agricolas.html"),
       },
       output: {
         plugins: [terser()],

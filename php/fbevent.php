@@ -17,16 +17,13 @@ $pixelId = '1249024706864038';
 $accessToken = 'EAARhCoDM9UYBPH6HpdFrOFsKAQFfRLbEYkbAZAT2XTLsBbkUrjr9rNFYoq8G3zidl381VLa8zEZC36ZCk5BjZCLYTdH8We0RQswWHukze19jbkTLJNf6DSkRlLGYDBVbRoEX9uCfydjcS8fsFNTGNIpJUYa5ji9OiHNr0tS6hMZA5i9lCYw5ZAGPCcum6jbLkd3QZDZD';
 $url = "https://graph.facebook.com/v11.0/$pixelId/events";
 
-$state = isset($_POST['estado']) ? trim($_POST['estado']) : $geoData['region'] ?? '';
-$city = isset($_POST['cidade']) ? trim($_POST['cidade']) : $geoData['city'] ?? '';
-
 $telefone = isset($_POST['telefone']) ? $_POST['telefone'] : '';
 $nome = isset($_POST['nome']) ? $_POST['nome'] : '';
 
 $telefoneHash = !empty($telefone) ? hash('sha256', $telefone) : null;
 $nomeHash = !empty($nome) ? hash("sha256", $nome) : null;
-$estadoHash = hash('sha256', $state);
-$cidadeHash = hash('sha256', $city);
+$estadoHash = hash('sha256', $geoData['region']);
+$cidadeHash = hash('sha256', $geoData['city']);
 $paisHash = hash('sha256', $geoData['country']);
 $zipHash = hash("sha256", $geoData['zip']);
 

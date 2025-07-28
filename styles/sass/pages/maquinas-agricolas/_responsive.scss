@@ -1,0 +1,27 @@
+@include respond-to("xl", $type: "max") {
+  @include hero-xl-max;
+}
+
+@include respond-to("lg", $type: "max") {
+  @include hero-lg-max;
+}
+
+@include respond-to("md", $type: "min") {
+  @include about-md-min;
+}
+
+@include respond-to("md", $type: "max") {
+  @include benefits-md-max;
+  @include about-md-max;
+  @include contact-md-max;
+}
+
+@include respond-to("sm", $type: "max") {
+  @include hero-sm-max;
+  @include faq-sm-max;
+  @include benefits-sm-max;
+}
+
+@include respond-to("xs", $type: "max") {
+  @include faq-xs-max;
+}

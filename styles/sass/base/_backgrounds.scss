@@ -9,4 +9,22 @@
       background-size: 125%;
     }
   }
+
+  &--line-pattern {
+    background-image: url("#{$image-path}/line-pattern-red-background.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+  }
+}
+
+.bg-dark {
+  background-color: $gray-900;
+
+  &--line-pattern {
+    background-image: url("#{$image-path}/line-pattern-black-background.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: 100% 100%;
+  }
 }

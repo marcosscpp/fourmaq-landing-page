@@ -1,0 +1,77 @@
+.faq {
+  background-color: $white;
+
+  &__title {
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  &__item {
+    align-items: center;
+    background-color: $gray-50;
+    border-radius: 99rem;
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 2rem;
+
+    &-title,
+    &-description {
+      color: $gray-950;
+      font-size: 1.25rem;
+    }
+
+    &-icon {
+      width: 3rem;
+    }
+  }
+}
+
+@mixin faq-sm-max {
+  .faq {
+    &__container {
+      padding-bottom: 0;
+    }
+
+    &__item {
+      flex-direction: column;
+      text-align: center;
+
+      &-title {
+        margin-bottom: 0.25rem;
+        text-wrap: balance;
+      }
+
+      &-description {
+        font-size: 1.125rem;
+      }
+    }
+  }
+}
+
+@mixin faq-xs-max {
+  .faq {
+    &__container {
+      padding: {
+        left: 0;
+        right: 0;
+      }
+    }
+
+    &__item {
+      border-radius: 0;
+    }
+
+    &__button {
+      margin: {
+        left: 3.5rem;
+        right: 3.5rem;
+      }
+    }
+  }
+}

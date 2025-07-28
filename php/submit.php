@@ -38,10 +38,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $name = isset($_POST['nome']) ? trim($_POST['nome']) : '';
     $email = isset($_POST['email']) ? trim($_POST['email']) : '';
     $phone = isset($_POST['telefone']) ? trim($_POST['telefone']) : '';
-    $state = isset($_POST['estado']) ? trim($_POST['estado']) : '';
-    $city = isset($_POST['cidade']) ? trim($_POST['cidade']) : '';
-    $preference = isset($_POST['preferencia']) ? trim($_POST['preferencia']) : '';
-    $urgency = isset($_POST['urgencia']) ? trim($_POST['urgencia']) : '';
+    // $state = isset($_POST['estado']) ? trim($_POST['estado']) : '';
+    // $city = isset($_POST['cidade']) ? trim($_POST['cidade']) : '';
+    // $preference = isset($_POST['preferencia']) ? trim($_POST['preferencia']) : '';
+    // $urgency = isset($_POST['urgencia']) ? trim($_POST['urgencia']) : '';
 
     // UTM Parameters
     $utm_source = isset($_POST['utm_source']) ? htmlspecialchars($_POST['utm_source']) : 'Desconhecido';
@@ -89,22 +89,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 "field_id" => 976988,
                                 "values" => [["value" => $formattedPhone]]
                             ],
-                            [
-                                "field_id" => 978832,
-                                "values" => [["value" => $state]]
-                            ],
-                            [
-                                "field_id" => 978828,
-                                "values" => [["value" => $city]]
-                            ],
-                            [
-                                "field_id" => 978836,
-                                "values" => [["value" => $preference]]
-                            ],
-                            [
-                                "field_id" => 978838,
-                                "values" => [["value" => $urgency]]
-                            ],
+                            // [
+                            //     "field_id" => 978832,
+                            //     "values" => [["value" => $state]]
+                            // ],
+                            // [
+                            //     "field_id" => 978828,
+                            //     "values" => [["value" => $city]]
+                            // ],
+                            // [
+                            //     "field_id" => 978836,
+                            //     "values" => [["value" => $preference]]
+                            // ],
+                            // [
+                            //     "field_id" => 978838,
+                            //     "values" => [["value" => $urgency]]
+                            // ],
                             [
                                 "field_id" => 978840,
                                 "values" => [["value" => $utm_content]]
@@ -125,7 +125,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     ]
                 ],
             ],
-            "pipeline_id" => 11508851,
+            "pipeline_id" => 11542391,
             "name" => $name
         ]
     ];
