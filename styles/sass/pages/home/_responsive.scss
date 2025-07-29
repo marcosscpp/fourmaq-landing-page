@@ -17,7 +17,6 @@
 
 @include respond-to("sm", $type: "min") {
   @include contact-sm-min;
-  @include branches-sm-min;
 }
 
 @include respond-to("sm", $type: "max") {
@@ -28,5 +27,4 @@
   @include promo-sm-max;
   @include contact-sm-max;
   @include excelence-sm-max;
-  @include branches-sm-max;
 }
