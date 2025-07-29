@@ -4,6 +4,7 @@ import { resolve } from "path";
 
 export default defineConfig({
   root: "./",
+  base: "./",
   build: {
     minify: "terser",
     rollupOptions: {

@@ -1,5 +1,10 @@
 <?php
 
+include("get-location.php");
+
+$userIP = $_SERVER['REMOTE_ADDR'];
+$geoData = getGeoLocation($userIP);
+
 function sendJsonResponse($status, $message) {
     header('Content-Type: application/json');
     echo json_encode(['status' => $status, 'message' => $message]);
@@ -7,7 +12,7 @@ function sendJsonResponse($status, $message) {
 }
 
 function formatPhoneNumber($phone) {
-    $phone = preg_replace('/\D/', '', $phone);
+    $phone = preg_replace('/[^0-9\-]/', '', $phone);
     
     if (strlen($phone) < 3) {
         return null;
@@ -21,7 +26,7 @@ function formatPhoneNumber($phone) {
 }
 
 function sendLeadRequest($data, $headers) {
-    $url = "https://tiamofourmaqcombr.kommo.com/api/v4/leads/complex";
+    $url = "https://fourmaq.kommo.com/api/v4/leads/complex";
     $ch = curl_init($url);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
@@ -38,10 +43,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $name = isset($_POST['nome']) ? trim($_POST['nome']) : '';
     $email = isset($_POST['email']) ? trim($_POST['email']) : '';
     $phone = isset($_POST['telefone']) ? trim($_POST['telefone']) : '';
-    // $state = isset($_POST['estado']) ? trim($_POST['estado']) : '';
-    // $city = isset($_POST['cidade']) ? trim($_POST['cidade']) : '';
-    // $preference = isset($_POST['preferencia']) ? trim($_POST['preferencia']) : '';
-    // $urgency = isset($_POST['urgencia']) ? trim($_POST['urgencia']) : '';
+    $state = isset($geoData['region']) ? trim($geoData['region']) : '';
+    $city = isset($geoData['city']) ? trim($geoData['city']) : '';
 
     // UTM Parameters
     $utm_source = isset($_POST['utm_source']) ? htmlspecialchars($_POST['utm_source']) : 'Desconhecido';
@@ -89,22 +92,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 "field_id" => 976988,
                                 "values" => [["value" => $formattedPhone]]
                             ],
-                            // [
-                            //     "field_id" => 978832,
-                            //     "values" => [["value" => $state]]
-                            // ],
-                            // [
-                            //     "field_id" => 978828,
-                            //     "values" => [["value" => $city]]
-                            // ],
-                            // [
-                            //     "field_id" => 978836,
-                            //     "values" => [["value" => $preference]]
-                            // ],
-                            // [
-                            //     "field_id" => 978838,
-                            //     "values" => [["value" => $urgency]]
-                            // ],
+                            [
+                                "field_id" => 978832,
+                                "values" => [["value" => $state]]
+                            ],
+                            [
+                                "field_id" => 978828,
+                                "values" => [["value" => $city]]
+                            ],
                             [
                                 "field_id" => 978840,
                                 "values" => [["value" => $utm_content]]

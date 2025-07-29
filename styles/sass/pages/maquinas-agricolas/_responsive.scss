@@ -6,14 +6,20 @@
   @include hero-lg-max;
 }
 
+@include respond-to("lg", $type: "min") {
+  @include pros-lg-min;
+}
+
 @include respond-to("md", $type: "min") {
   @include about-md-min;
 }
 
 @include respond-to("md", $type: "max") {
+  @include pros-md-max;
   @include benefits-md-max;
   @include about-md-max;
   @include contact-md-max;
+  @include products-md-max;
 }
 
 @include respond-to("sm", $type: "max") {

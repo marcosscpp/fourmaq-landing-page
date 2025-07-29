@@ -2,8 +2,8 @@
   &__container {
     display: flex;
     flex-wrap: wrap;
-    gap: 3rem;
-    justify-content: center;
+    gap: 4rem 2rem;
+    justify-content: space-between;
     padding: {
       top: 3.5rem;
       bottom: 3.5rem;
@@ -18,7 +18,7 @@
 
   &__content {
     flex: 1;
-    max-width: 34rem;
+    max-width: 34.5rem;
   }
 
   &__description {

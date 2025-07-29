@@ -1,7 +1,7 @@
-import triggerEvent from "./modules/trigger-event";
+import triggerEvent from "./modules/maquinas-agricolas/trigger-event";
 import SmoothScroll from "./modules/smooth-scroll";
 
-import Form from "./modules/form";
+import Form from "./modules/maquinas-agricolas/form";
 import Modal from "./modules/modal";
 import initHotjar from "./init-hotjar";
 
